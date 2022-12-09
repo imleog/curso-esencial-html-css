@@ -35,7 +35,8 @@
 
 body {
   color: var(--gray30);
-  font-family: ;
+  font-family: 'Roboto', sans-serif;
+  /* font-family: charter; */
 }
 
 a {
@@ -74,4 +75,13 @@ h3 {
 
 p {
   font-size: 1em;
+}
+
+pre {
+  background: #FEC62E;
+}
+
+.hero {
+  height: 350px;
+  background-image: linear-gradient(to top, rgba(255,255,255,.3), transparent 90%), url('../images/patron_1.png');
 }
