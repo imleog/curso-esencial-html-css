@@ -27,62 +27,154 @@
 }
 
 :root {
-  font-size: 16px;
-  --gray30: #212121;
-  --gray20: #212429;
-  --gray10: #616161;
+  font-size: 17px;
+  --white30: #FFFFFF;
+  --white20: #3A3539;
+  --white10: #A5A3A5;;
 }
 
 body {
-  color: var(--gray30);
-  font-family: 'Roboto', sans-serif;
+  color: var(--white30);
+  font-family: 'Nunito', sans-serif;
+  background: #251F24;
+  /* margin-inline: 100px; */
+  /* margin-inline-start: ; Es igual a margin-left */
+  /* margin-inline-end: ; Es igual a margin-right*/
+  /* margin-block: 100px; */
+  /* margin-block-start: ; Es igual a margin-top */
+  /* margin-block-end: ; Es igual a margin-bottom */
+
 }
 
 a {
-  color: var(--gray30);
+  color: var(--white30);
+}
+
+.header {
+  position: sticky;
+  inset-block-start: 32px;
+}
+
+.header-content {
+  position: relative;
+  margin-block-start: 64px;
 }
 
 header {
   font-size: 14px;
-  color: var(--gray10);
+  color: var(--white30);
+  line-height: 32px;
+  position: absolute;
+  /* top */
+  /* inset-block-start: ; */
+  /* ----------------------------------- */
+  /* bottom */
+  /* inset-block-end: ; */
+  /* ----------------------------------- */
+  /* left */
+  inset-inline-start: -321px;
+  /* ----------------------------------- */
+  /* right */
+  /* inset-inline-end: ; */
+  inline-size: 188px
+}
+
+header li {
+  color: var(--white10);
 }
 
 header a {
-  color: var(--gray10);
+  color: var(--white10);
   text-decoration: none;
 }
 
 header a:hover {
-  color: var(--gray30);
+  color: var(--white30);
 }
 
 header details summary {
   font-weight: bold;
 }
 
+h1, h2 {
+  font-weight: bold;
+}
+
 h1 {
-  font-size: 60px;
+  font-size: 64px;
+  margin-block-start: 64px;
+  margin-block-end: 16px;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 40px;
+  margin-block: 40px;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 32px;
+  font-weight: 600;
+  margin-block: 16px;
+}
+
+hr {
+  margin-block: 40px;
+  border: 1px solid rgba(97, 97, 97, 0.2);
 }
 
 p {
   font-size: 1em;
+  color: var(--white10);
+  line-height: 24px;
 }
 
 pre {
-  background: #FEC62E;
+  background: var(--white20);
+  border-radius: 8px;
+  padding: 40px;
+  line-height: 24px;
+  font-size: 16px;
+  overflow: auto;
+  margin-block-end: 40px;
+  /* border: 10px solid red;
+  border-inline-end: 10px solid blue;
+  border-block-start-color: white; */
+  /* border: 10px solid #5551FF;
+  box-shadow: -10px 10px 0 0 #ABAAF6; */
+  /* border-end-end-radius: 60px; */
+}
+
+blockquote {
+  background: var(--white20);
+  margin-inline: 0;
+  margin-block-start: 80px;
+  margin-block-end: 63px;
+  border-radius: 8px;
+  padding-inline-end: 24px;
+  padding-inline-start: 24px;
+  padding-block-start: 24px;
+  padding-block-end: 24px;
+}
+
+blockquote p {
+  line-height: 32px;
+  font-size: 24px;
+  font-weight: normal;
+  color: var(--white30);
+  text-align: justify;
 }
 
 .hero {
   height: 350px;
-  background-image: linear-gradient(to top, rgba(255,255,255,.3), transparent 90%), url('../images/patron_1.png');
+  background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
+}
+
+.section-content img {
+  margin-block-start: 40px;
+  margin-block-end: 40px;
+  display: block;
+  max-inline-size: 100%;
+  /* max-width: 100%; */
 }
 
 .section-content {
@@ -93,16 +185,41 @@ pre {
   counter-increment: titleList;
 }
 
-.section-content h3::before {
-  content: counter(titleList, decimal);
+.section-content ol, ul {
+  color: var(--white10);
+  line-height: 32px;
+  font-weight: normal;
 }
 
-.section-content h3::after {
+.section-content h3::before {
+  content: counter(titleList, decimal)'. ';
+}
+
+/* .section-content h3::after {
   content: '';
   width: 32px;
   height: 4px;
-  background: var(--gray30);
+  background: var(--white30);
   display: inline-block;
+} */
+
+.main {
+  padding: 0;
+  /* border: 1px solid red; */
+}
+
+.wrapper {
+  /* border: 1px solid yellow; */
+  max-inline-size: 636px;
+  /* max-width: 902px; */
+  /* block-size: 100px; */
+  margin: auto;
+  /* width: ; */
+}
+
+.main-content {
+  padding-inline: 16px;
+  /* border: 1px solid blue; */
 }
 
 /* ::selection {
