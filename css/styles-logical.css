@@ -30,13 +30,15 @@
   font-size: 17px;
   --white30: #FFFFFF;
   --white20: #3A3539;
-  --white10: #A5A3A5;;
+  --white10: #A5A3A5;
+  ;
 }
 
 body {
   color: var(--white30);
   font-family: 'Nunito', sans-serif;
   background: #251F24;
+  margin: 0;
   /* margin-inline: 100px; */
   /* margin-inline-start: ; Es igual a margin-left */
   /* margin-inline-end: ; Es igual a margin-right*/
@@ -50,21 +52,22 @@ a {
   color: var(--white30);
 }
 
-.header {
+/* .header {
   position: sticky;
   inset-block-start: 32px;
-}
+} */
 
 .header-content {
-  position: relative;
+  /* position: relative; */
   margin-block-start: 64px;
+  padding-inline: 20px;
 }
 
 header {
   font-size: 14px;
   color: var(--white30);
   line-height: 32px;
-  position: absolute;
+  /* position: absolute; */
   /* top */
   /* inset-block-start: ; */
   /* ----------------------------------- */
@@ -72,11 +75,11 @@ header {
   /* inset-block-end: ; */
   /* ----------------------------------- */
   /* left */
-  inset-inline-start: -321px;
+  /* inset-inline-start: -321px; */
   /* ----------------------------------- */
   /* right */
   /* inset-inline-end: ; */
-  inline-size: 188px
+  /* inline-size: 188px */
 }
 
 header li {
@@ -96,23 +99,24 @@ header details summary {
   font-weight: bold;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: bold;
 }
 
 h1 {
-  font-size: 64px;
+  font-size: 40px;
   margin-block-start: 64px;
   margin-block-end: 16px;
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 30px;
   margin-block: 40px;
 }
 
 h3 {
-  font-size: 32px;
+  font-size: 20px;
   font-weight: 600;
   margin-block: 16px;
 }
@@ -133,7 +137,7 @@ pre {
   border-radius: 8px;
   padding: 40px;
   line-height: 24px;
-  font-size: 16px;
+  font-size: 15px;
   overflow: auto;
   margin-block-end: 40px;
   /* border: 10px solid red;
@@ -158,14 +162,15 @@ blockquote {
 
 blockquote p {
   line-height: 32px;
-  font-size: 24px;
+  font-size: 15px;
   font-weight: normal;
   color: var(--white30);
   text-align: justify;
 }
 
 .hero {
-  height: 350px;
+  block-size: 50px;
+  inline-size: 100%;
   background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
 }
 
@@ -185,7 +190,8 @@ blockquote p {
   counter-increment: titleList;
 }
 
-.section-content ol, ul {
+.section-content ol,
+ul {
   color: var(--white10);
   line-height: 32px;
   font-weight: normal;
@@ -260,6 +266,74 @@ blockquote p {
   display: inline-block;
   inline-size: 15px;
   block-size: 15px;
-  background: white;
+  background: var(--white30);
   border-radius: 50%;
+}
+
+.form input {
+  inline-size: 100%;
+  border: 1px solid var(--white30);
+  background: #251F24;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding-inline: 16px;
+  padding-block: 12px;
+  color: var(--white30);
+  font-size: 16px;
+  display: block;
+  margin-block-end: 24px;
+}
+
+.form input[type="submit"] {
+  background: #157EFB;
+  border: none;
+}
+
+.form ::-webkit-input-placeholder {
+  color: var(--white20);
+}
+
+@media screen and (min-width: 1360px) {
+
+  pre {
+    font-size: 16px;
+  }
+
+  blockquote p {
+    font-size: 24px;
+  }
+
+  h1 {
+    font-size: 64px;
+  }
+
+  h2{
+    font-size: 40px;
+  }
+
+  h3{
+    font-size: 32px;
+  }
+
+  .hero {
+    block-size: 350px;
+  }
+
+  .header {
+      position: sticky;
+      inset-block-start: 32px;
+  }
+
+  .header-content {
+      position: relative;
+      margin-block-start: 64px;
+      padding-inline: 0;
+  }
+
+  header {
+      position: absolute;
+      inset-inline-start: -321px;
+      inset-block-start: 0;
+      inline-size: 188px
+  }
 }
