@@ -232,7 +232,7 @@ blockquote p {
 
 .slider-container {
   /* block-size: 100px; */
-  display: block;
+  display: inline-block;
   overflow: auto;
   overflow-x: hidden;
   scroll-behavior: smooth;
