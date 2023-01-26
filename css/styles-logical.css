@@ -233,7 +233,8 @@ blockquote p {
 .slider-container {
   /* block-size: 100px; */
   display: block;
-  overflow: hidden;
+  overflow: auto;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   white-space: nowrap;
   /* border: 1px solid green; */
