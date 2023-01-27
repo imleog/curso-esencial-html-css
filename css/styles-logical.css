@@ -26,6 +26,10 @@
   font-weight: bold;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   font-size: 17px;
   --white30: #FFFFFF;
